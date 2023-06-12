@@ -97,14 +97,15 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:sample_button/scroll.dart';
-import 'package:sample_button/scrolling.dart';
+import 'package:sample_button/hori_table.dart';
+import 'package:sample_button/login.dart';
 
-import 'image_capture.dart';
+import 'profile.dart';
+import 'profile1.dart';
 
 void main() {
   // runApp(const MyApp());
-  runApp(MaterialApp(home: ImageFile()));
+  runApp(MaterialApp(home: ProfilePage(title: 'Hello')));
 }
 
 class MyApp extends StatelessWidget {
