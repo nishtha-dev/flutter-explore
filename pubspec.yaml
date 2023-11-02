@@ -46,6 +46,9 @@ dependencies:
   printing: ^5.10.4
   horizontal_data_table: ^4.2.0
   flutter_typeahead: ^3.1.7
+  dropdown_search: ^5.0.6
+  easy_search_bar: ^2.5.0
+  speech_to_text: ^6.3.0
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +76,7 @@ flutter:
   assets:
     - assets/certificates/certificates/sni.cloudflaressl.com.pem
     - assets/certificates/certificates/_.google.com.pem
+    - assets/certificates/certificates/
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

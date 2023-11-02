@@ -97,17 +97,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:sample_button/drop_down.dart';
-import 'package:sample_button/hori_table.dart';
-import 'package:sample_button/login.dart';
+import 'package:sample_button/speech-to-text.dart';
+import 'package:sample_button/textfield_search.dart';
 
-import 'profile.dart';
-import 'profile1.dart';
-
-void main() {
-  // runApp(const MyApp());
-  runApp(MaterialApp(home: dateTime()));
-}
+// void main() {
+//   // runApp(const MyApp());
+//   runApp(MyHomePage());
+// }
 
 // class MyApp extends StatelessWidget {
 //   const MyApp({Key? key}) : super(key: key);
@@ -335,6 +331,19 @@ void main() {
 //     );
 //   }
 // }
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      home: SpeechText(),
+    );
+  }
+}
 
 class Page1 extends StatelessWidget {
   const Page1({Key? key}) : super(key: key);
@@ -419,3 +428,70 @@ class Page4 extends StatelessWidget {
     );
   }
 }
+
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   final TextEditingController _controller = TextEditingController();
+//   var items = [
+//     'Working a lot harder',
+//     'Being a lot smarter',
+//     'Being a self-starter',
+//     'Placed in charge of trading charter'
+//   ];
+//   runApp(
+//     MaterialApp(
+//       title: 'Drop List Example',
+//       home: Scaffold(
+//         appBar: AppBar(title: const Text('Drop List Example')),
+//         body: Center(
+//           child: Container(
+//             child: Column(
+//               children: [
+//                 Padding(
+//                   padding: const EdgeInsets.all(24.0),
+//                   child: Row(
+//                     children: <Widget>[
+//                       Expanded(
+//                           child: TextField(
+//                         controller: _controller,
+//                         decoration: InputDecoration(
+//                           suffixIcon: PopupMenuButton<String>(
+//                             icon: const Icon(Icons.arrow_drop_down),
+//                             onSelected: (String value) {
+//                               _controller.text = value;
+//                             },
+//                             itemBuilder: (BuildContext context) {
+//                               return items
+//                                   .map<PopupMenuItem<String>>((String value) {
+//                                 return new PopupMenuItem(
+//                                     child: new Text(value), value: value);
+//                               }).toList();
+//                             },
+//                           ),
+//                         ),
+//                       )),
+//                       PopupMenuButton<String>(
+//                         icon: const Icon(Icons.arrow_drop_down),
+//                         onSelected: (String value) {
+//                           _controller.text = value;
+//                         },
+//                         itemBuilder: (BuildContext context) {
+//                           return items
+//                               .map<PopupMenuItem<String>>((String value) {
+//                             return PopupMenuItem(
+//                                 child: Text(value), value: value);
+//                           }).toList();
+//                         },
+//                       ),
+//                     ],
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           ),
+//         ),
+//       ),
+//     ),
+//   );
+// }
